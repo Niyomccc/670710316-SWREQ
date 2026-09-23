@@ -21,6 +21,10 @@ Spec ID: SPEC-BKG-001
 - เสร็จเมื่อ: tests รันโดยเชื่อมต่อ SQLite in-memory ผ่าน `DATABASE_URL` แบบทดสอบ
 - สถานะ: พร้อมทำ
 
+## T-02 Implementation Notes
+- สถานะปัจจุบัน: เสร็จ รอทีมตรวจ
+- ทดสอบ: `backend/app/tests/test_T02_session.py` ผ่าน
+
 ### T-03 GET /slots: คำนวณช่วงว่างภายใน 30 วัน
 - รองรับ: FR-BKG-01, FR-BKG-06, NFR-PERF-01
 - ตรวจด้วย: AC-BKG-05 (ทดสอบประสิทธิภาพย่อส่วน), ไม่มี AC ตรง ๆ สำหรับ functional response -> test_AC_BKG_05
