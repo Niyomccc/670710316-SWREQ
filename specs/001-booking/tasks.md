@@ -11,7 +11,7 @@ Spec ID: SPEC-BKG-001
 - ไฟล์ที่แตะ: backend/app/db/models.py, backend/app/db/migrations/001_init.py
 - ต้องทำหลัง: ไม่มี
 - เสร็จเมื่อ: migration สร้างตาราง `slots`, `bookings`, `audit_logs` และ schema ทำงานใน test DB ได้
-- สถานะ: พร้อมทำ
+- สถานะ: เสร็จ รอทีมตรวจ
 
 ### T-02 ตั้งค่า session และ config ของฐานข้อมูล
 - รองรับ: CON-TECH-01

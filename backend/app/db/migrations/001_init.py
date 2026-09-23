@@ -15,10 +15,23 @@ def _load_base_from_models():
     return getattr(module, "Base")
 
 
+def _reset_sqlite_test_db(engine_url: str):
+    """Reset the repo's reusable SQLite test database before schema creation.
+    รองรับ: CON-TECH-01, DOM-PDPA-01, IF-HIS-01
+    """
+    if not engine_url.startswith("sqlite://"):
+        return
+
+    db_path = engine_url.replace("sqlite:///", "", 1)
+    if os.path.basename(db_path) == "test_db.sqlite3" and os.path.exists(db_path):
+        os.remove(db_path)
+
+
 def upgrade(engine_url: str = "sqlite:///:memory:"):
     """Create initial tables: slots, bookings, audit_logs
     รองรับ: CON-TECH-01, DOM-PDPA-01, IF-HIS-01
     """
+    _reset_sqlite_test_db(engine_url)
     engine = create_engine(engine_url)
     Base = _load_base_from_models()
     Base.metadata.create_all(engine)
