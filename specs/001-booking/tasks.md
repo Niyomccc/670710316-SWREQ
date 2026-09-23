@@ -5,13 +5,13 @@ Spec ID: SPEC-BKG-001
 
 สรุป: มี 12 งานย่อย, 1 งานรอ Open Questions
 
-### T-01 สร้าง migration และตารางฐานข้อมูล
+-### T-01 สร้าง migration และตารางฐานข้อมูล
 - รองรับ: CON-TECH-01, DOM-PDPA-01, IF-HIS-01
 - ตรวจด้วย: ไม่มี AC ตรง ๆ เป็นงานพื้นฐานของ T-xx
 - ไฟล์ที่แตะ: backend/app/db/models.py, backend/app/db/migrations/001_init.py
 - ต้องทำหลัง: ไม่มี
 - เสร็จเมื่อ: migrations สร้างตาราง `slots`, `bookings`, `audit_logs` สำเร็จและรันใน test DB
-- สถานะ: พร้อมทำ
+- สถานะ: เสร็จ รอทีมตรวจ
 
 ### T-02 เตรียม session DB และ config
 - รองรับ: CON-TECH-01
